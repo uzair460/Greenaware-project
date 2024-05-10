@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Observer Main Page</title>
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+    }
+    
+    .container {
+        width: 80%;
+        margin: 50px auto;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    header, footer {
+        padding: 20px;
+        text-align: center;
+        background-color: #007bff;
+        color: #fff;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    
+    main {
+        padding: 40px;
+    }
+    
+    form {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    label {
+        display: block;
+        font-weight: bold;
+    }
+    
+    input[type="date"],
+    input[type="time"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    
+    button[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    button[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+    </style>
+</head>
+<%- include('../partials/sideMenu') %>
+<body>
+    <div class="container">
+        <header>
+            <h1>Observer Main Page</h1>
+        </header>
+        <main>
+            <main>
+                <form action="/dashboard" method="POST">
+                    <h2>Submit Observation</h2>
+                    <div class="form-group">
+                        <label for="date">Date:</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Time:</label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="timeZoneOffset">Time Zone Offset:</label>
+                        <input type="text" id="timeZoneOffset" name="timeZoneOffset" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="coordinates">Coordinates(W3W):</label>
+                        <input type="text" id="coordinates" name="coordinates" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="temperatureLand">Temperature - Land Surface (°C):</label>
+                        <input type="number" id="temperatureLand" name="temperatureLand" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="temperatureSea">Temperature - Sea Surface (°C):</label>
+                        <input type="number" id="temperatureSea" name="temperatureSea" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="humidity">Humidity (g/kg):</label>
+                        <input type="number" id="humidity" name="humidity" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="windSpeed">Wind Speed (km/h):</label>
+                        <input type="number" id="windSpeed" name="windSpeed" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="windDirection">Wind Direction (decimal degrees):</label>
+                        <input type="number" id="windDirection" name="windDirection" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="precipitation">Precipitation (mm):</label>
+                        <input type="number" id="precipitation" name="precipitation" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="haze">Haze (%):</label>
+                        <input type="number" id="haze" name="haze" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="notes">Notes:</label>
+                        <textarea id="notes" name="notes" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>   
+            </main>
+        </main>
+        <footer>
+            <p>&copy; 2024 Observer Main Page</p>
+        </footer>
+    </div>
+</body>
+</html>

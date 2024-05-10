@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disable Account</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <main>
+        <h1>disable observer account</h1>
+    <p>Enter the username of the observer whose account you want to disable:</p>
+    <form action="/dashboard/disable_account" method="POST">
+        <label for="username">Observer Username:</label>
+        <input type="text" id="username" name="username" required>
+        <button type="submit">Disable Account</button>
+    </form>
+</main>
+
+ <!-- Back button -->
+ <a href="/dashboard" class="button">Back to Support Dashboard</a>
+<!-- Footer -->
+<footer>
+    <p>Greenaware &copy; 2024</p>
+</footer>
+</body>
+
+

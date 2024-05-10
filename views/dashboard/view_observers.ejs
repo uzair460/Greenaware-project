@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Observers - Greenaware</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>View Observers</h1>
+    </header>
+    
+    <!-- List of Observers -->
+    <div class="observers-list">
+        <% if(observers.length > 0) { %>
+            <ul>
+                <% observers.forEach(observer => { %>
+                    <li>
+                        <strong>Username:</strong> <%= observer.username %><br>
+                        <strong>Forename:</strong> <%= observer.forename %><br>
+                        <strong>Surname:</strong> <%= observer.surname %><br>
+                        
+                    </li>
+                <% }); %>
+            </ul>
+        <% } else { %>
+            <p>No active observers found.</p>
+        <% } %>
+    </div>
+
+    <!-- Back button -->
+    <a href="/dashboard" class="button">Back to Support Dashboard</a>
+</body>
+</html>

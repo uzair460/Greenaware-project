@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Dashboard - Greenaware</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        /* Styles for the navbar */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #3300ff;
+            color: #ffffff;
+            padding: 10px;
+            margin-top: 50px; /* Adjust as needed */
+        }
+        
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        
+        .navbar li {
+            margin: 0 10px;
+        }
+        
+        .navbar a {
+            text-decoration: none;
+            color: inherit;
+            font-weight: bold;
+        }
+
+        /* Styles for dropdown menu */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="dashboard/view_observers">View all Observers</a></li>
+            <li><a href="dashboard/support_conversations">Observers Messages</a></li>
+            <li class="dropdown">
+                <a href="#">Manage Account</a>
+                <div class="dropdown-content">
+                    <a href="/dashboard/disable_account">Disable Observer Account</a>
+                    <a href="/dashboard/create_account">Create New Support Account</a>
+                </div>
+            </li>
+            <li><a href="/login">Logout</a></li>
+        </ul>
+    </div>
+</body>
+</html>

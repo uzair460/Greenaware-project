@@ -1,0 +1,71 @@
+<!-- support_conversations.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Conversations</title>
+    <style>
+        /* Add your CSS styles here */
+        .message-box {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .message-content {
+            margin-bottom: 10px;
+        }
+
+        .delete-btn {
+            background-color: #ff6347;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .reply-btn {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .dashboard-btn {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Support Conversations</h1>
+    <% messages.forEach(message => { %>
+        <div class="message-box">
+            <div class="message-content">
+                <strong>Email:</strong> <%= message.email %><br>
+                <strong>Full Name:</strong> <%= message.full_name %><br>
+                <strong>Message:</strong> <%= message.content %><br>
+            </div>
+            <form action="/dashboard/support_conversations/<%= message._id %>" method="POST">
+                <button class="delete-btn" type="submit">Delete</button>
+            </form>
+            <a href="mailto:<%= message.email %>?subject=Reply%20to%20your%20message" class="reply-btn">Reply</a>
+        </div>
+    <% }) %>
+    <form action="/dashboard" method="GET">
+        <button class="dashboard-btn" type="submit">Return to Dashboard</button>
+    </form>
+</body>
+</html>

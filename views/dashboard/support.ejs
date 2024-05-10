@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Dashboard - Greenaware</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("/images/background.jpg");
+            background-size: cover;
+            background-position: center;
+            color: white;
+            height: 100vh; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #navbar-container {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8); 
+            z-index: 1000; 
+        }
+        .main-content {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .cta-text {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .buttons-container {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #3300ff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style></head>
+<body>
+
+    <!-- Include the top navbar -->
+    <div id="navbar-container">
+<%- include('../partials/navbar') %>
+</div>
+
+
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <!-- <h1>Support Dashboard</h1> -->
+        <div class="cta-text">Make an impact</div>
+
+        <div class="buttons-container">
+            <button onclick="window.location.href='/dashboard/create_account'">Create Support Account</button>
+            <button onclick="window.location.href='/dashboard/disable_account'">Disable an Account</button>
+        </div>
+    </div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>

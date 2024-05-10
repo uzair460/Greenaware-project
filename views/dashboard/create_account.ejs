@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Support Account - Greenaware</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Create Support Account</h1>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <form action="/dashboard/support/create_account" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="forename">Forename:</label>
+            <input type="text" id="forename" name="forename" required>
+
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <select name="category">
+                <option value="support">Support</option>
+            </select>
+
+            <button type="submit">Create Account</button>
+        </form>
+    </main>
+<!-- Back button -->
+<a href="/dashboard" class="button">Back to Support Dashboard</a>
+    <!-- Footer -->
+    <footer>
+        <p>Greenaware &copy; 2024</p>
+    </footer>
+</body>
+</html>
